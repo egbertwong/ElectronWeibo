@@ -11,6 +11,8 @@ The first version will be uploaded during ***Chinese New Year***.
 ## Install
 
 ```bash
+git clone https://github.com/egbertwong/ElectronWeibo.git
+cd ElectronWeibo
 npm install
 npm start
 ```
