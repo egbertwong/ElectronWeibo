@@ -1,0 +1,51 @@
+.title-box{
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.title-avatar{
+    float:left;
+}
+.title-text{
+    display: inline-flex;
+    margin-left: 8px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    width: auto;
+    flex-direction: column;
+}
+.title-name{
+    font-size: 16px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.title-created{
+    color: darkgrey;
+    font-size: 12px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.weibo-main{
+    background-color: white;
+}
+.weibo-og{
+    background-color: white;
+    font-size: 16px;
+}
+.weibo-footer{
+    float: left;
+    font-size: 8px;
+    margin:0 8px
+}
+.weibo-footer-text{
+    margin-left: 8px;
+    font-size: 12px;
+}

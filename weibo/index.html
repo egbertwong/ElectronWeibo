@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div style="-webkit-app-region: drag">
+        <nav class="navbar navbar-dark bg-dark">
+            <span class="navbar-brand">Navbar</span>
+        </nav>
+    </div>
+    <div class="container mt-4" id="main-window">
+        <h1>Hello World!</h1>
+        <p>显示单条微博</p>
+        <button type="button" id="btn-show-single-weibo" class="btn btn-primary">显示单条微博</button>
+        <p>显示微博流</p>
+        <button type="button" id="btn-show-weibo-lists" class="btn btn-primary">显示微博流</button>
+        <p id="source"></p>
+    </div>
+    <script>
+        require('./index.js')
+    </script>
+</body>
+
+</html>
