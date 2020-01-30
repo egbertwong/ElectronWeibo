@@ -1,6 +1,10 @@
 const { ipcRenderer, dialog } = require('electron')
 const { $ } = require('./helper')
 
+$('btn-login').addEventListener('click', () => {
+    ipcRenderer.send('show-login-page')
+})
+
 $('btn-show-single-weibo').addEventListener('click', () => {
     ipcRenderer.send('show-single-weibo')
 })

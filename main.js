@@ -30,6 +30,10 @@ app.on('ready', () => {
     }
     
   }, './weibo/index.html')
+
+  ipcMain.on('show-login-page', (event) => {
+    console.log("click login button")
+  })
   ipcMain.on('show-single-weibo', (event) => {
     console.log("Open single weibo window")
     const singleWeibo = new AppWindow({
