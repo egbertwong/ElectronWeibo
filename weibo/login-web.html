@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>微博登录</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <!-- <script src="./login-web.js"></script> -->
+</head>
+
+<body style="margin: 0px; height: 100%; width: 100%;">
+
+    <!-- <webview id="foo" src="https://api.weibo.com/oauth2/authorize?client_id=3622201700&response_type=code&redirect_uri=https://api.weibo.com/oauth2/default.html&forcelogin=true&display=default" style="display:inline-block; width:100%; height:100%" autosize="on">
+    </webview> -->
+    <webview id="wv-login"
+        src="https://api.weibo.com/oauth2/authorize?client_id=3622201700&response_type=code&redirect_uri=https://api.weibo.com/oauth2/default.html&forcelogin=true&display=default"
+        style="min-height:600px; width:100%; height:100%" autosize="on">
+    </webview>
+    <script>
+        var webview = document.querySelector("webview")
+        webview.addEventListener('dom-ready', () => {
+            process.dlopen = () => {
+                throw new Error('Load native module is not safe')
+            }
+            let worker = new Worker({
+                
+            })
+            // var loginURL = webview.getURL()
+            // var n
+            // while (1) {
+            //     n = webview.getURL()
+            //     if (n == loginURL) {
+            //         console.log("1")
+            //         continue
+            //     } else {
+            //         console.log(webview.getURL())
+            //     }
+            // }
+        })
+    </script>
+</body>
+
+</html>

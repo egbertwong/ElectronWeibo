@@ -154,7 +154,7 @@ function setHTML(jsonItem) {
     likeIcon.style = "vertical-align:middle;";
     var likeText = document.createElement("span");
     likeText.className = "weibo-footer-text";
-    likeText.innerText = "转发";
+    likeText.innerText = "点赞";
     like.appendChild(likeIcon);
     like.appendChild(likeText);
 

@@ -33,6 +33,20 @@ app.on('ready', () => {
 
   ipcMain.on('show-login-page', (event) => {
     console.log("click login button")
+    const singleWeibo = new AppWindow({
+      width: 800,
+      height: 600,
+      // autoHideMenuBar: true,
+      // frame: false,
+      webPreferences: {
+        webviewTag: true,
+        nodeIntegration: true,
+        nodeIntegrationInWorker: true
+      },
+      parent: mainWIndow
+    }, './weibo/login-web.html')
+    singleWeibo.webContents.openDevTools()
+    // event.sender.send('single-weibo-get', "get")
   })
   ipcMain.on('show-single-weibo', (event) => {
     console.log("Open single weibo window")

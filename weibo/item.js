@@ -5,7 +5,7 @@ class WeiboItem {
 }
 
 const obj = {
-    access_token: '2.005ubVMGEI5IxD9040cd3da6EQElSB',
+    access_token: '2.00xjK8sBEI5IxD01ebba8c35sRhsaE',
     id: "4450453419227703"
 }
 

@@ -1,7 +1,7 @@
 const { ipcRenderer, dialog } = require('electron')
 
 const obj = {
-    access_token: '2.005ubVMGEI5IxD9040cd3da6EQElSB',
+    access_token: '2.00xjK8sBEI5IxD01ebba8c35sRhsaE',
 }
 
 const finalUrl = `${'https://api.weibo.com/2/statuses/home_timeline.json'}?${encodeSingleWeiboParams(obj)}`
