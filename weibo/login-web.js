@@ -1,12 +1,19 @@
 const { ipcRenderer, dialog } = require('electron')
 const { $ } = require('./helper')
 
-var webview = document.getElementById("wv-login")
-console.log(webview.getURL())
+var webview = document.querySelector("webview")
+webview.addEventListener('dom-ready', () => {
+    webview.addEventListener('update-target-url', () => {
+        const currentURL = new URL(webview.getURL())
+        if (currentURL.pathname == "/oauth2/default.html") {
+            checkURL(currentURL)
+            close()
+        }
+    })
+})
 
-process.dlopen = () => {
-    throw new Error('Load native module is not safe')
-  }
-  let worker = new Worker({
-      
-  })
+const checkURL = (currentURL) => {
+    const searchParams = new URLSearchParams(currentURL.search)
+    ipcRenderer.send('get-token-code', searchParams.get('code'))
+}
+
