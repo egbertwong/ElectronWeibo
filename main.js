@@ -40,7 +40,7 @@ app.on('ready', () => {
         let loginPage = new AppWindow({
             width: 800,
             height: 600,
-            // autoHideMenuBar: true,
+            autoHideMenuBar: true,
             // frame: false,
             webPreferences: {
                 webviewTag: true,
@@ -49,11 +49,13 @@ app.on('ready', () => {
             },
             parent: mainWIndow
         }, './weibo/login-web.html')
-        // event.sender.send('single-weibo-get', "get")
+        // loginPage.webContents.openDevTools()
     })
 
-    ipcMain.on('get-token-code', (event, tokenCode) => {
-        console.log(tokenCode)
+    ipcMain.on('get-auth-item', (event, authItem) => {
+        console.log('accessToken:' + authItem.access_token)
+        console.log('uid:' + authItem.uid)
+    
     })
 
     ipcMain.on('show-single-weibo', (event) => {
