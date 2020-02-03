@@ -10,6 +10,11 @@ I want to use Weibo on desktop. But I don't like the web version. So I decide to
 
 **It's just a practice project.**
 
+## TODO
+
+- Connect to server and get auth code. Get username and other information
+- Add main page, show weibo timeline
+
 ## Install
 
 ```bash
