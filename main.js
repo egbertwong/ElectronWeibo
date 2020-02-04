@@ -1,4 +1,7 @@
 const { app, BrowserWindow, ipcMain, dialog } = require('electron')
+const UserDataStore = require('./weibo/UserDataStore')
+
+const userDataStore = new UserDataStore({'name': 'UserData'})
 
 //新建窗口类
 class AppWindow extends BrowserWindow {
@@ -55,7 +58,7 @@ app.on('ready', () => {
     ipcMain.on('get-auth-item', (event, authItem) => {
         console.log('accessToken:' + authItem.access_token)
         console.log('uid:' + authItem.uid)
-    
+
     })
 
     ipcMain.on('show-single-weibo', (event) => {
