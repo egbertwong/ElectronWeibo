@@ -5,7 +5,8 @@ const path = require('path')
 class UserDataStore extends Store {
     constructor(settings) {
         super(settings)
-        this.uid = this.get('tracks') || []
+        this.tracks = this.get('tracks') || []
+        this.uid = []
     }
 
     saveTracks() {
