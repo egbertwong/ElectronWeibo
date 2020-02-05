@@ -6,7 +6,30 @@ class UserDataStore extends Store {
     constructor(settings) {
         super(settings)
         this.tracks = this.get('tracks') || []
-        this.uid = []
+        this.users = this.get('users') || []
+    }
+
+    saveUsers() {
+        this.set('users', this.users)
+        return this
+    }
+
+    getUsers() {
+        return this.get('users') || []
+    }
+
+    addUser(user) {
+        const tracksWithProps = user.map(user => {
+            return {
+                id: uuidv4(),
+                uid: user
+            }
+        }).filter(user => {
+            const currentUserUID = this.getUsers().map(user => user.uid)
+            return currentTracksPath.indexOf(track.path) < 0
+        })
+        this.tracks = [ ...this.tracks, ...tracksWithProps ]
+        return this.saveUsers()
     }
 
     saveTracks() {
