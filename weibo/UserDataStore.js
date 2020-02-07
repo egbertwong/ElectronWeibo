@@ -32,6 +32,11 @@ class UserDataStore extends Store {
         return this.saveUsers()
     }
 
+    deleteUser(deletedId) {
+        this.tracks = this.tracks.filter(item => item.id !== deletedId)
+        return this.saveTracks()
+    }
+
     saveTracks() {
         this.set('tracks', this.tracks)
         return this
