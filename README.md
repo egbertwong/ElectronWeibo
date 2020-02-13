@@ -12,8 +12,8 @@ I want to use Weibo on desktop. But I don't like the web version. So I decide to
 
 ## TODO
 
-- Connect to server and get auth code. Get username and other information
 - Add main page, show weibo timeline
+- Show retweet weibo
 
 ## Install
 
