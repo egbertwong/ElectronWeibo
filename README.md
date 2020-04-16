@@ -4,6 +4,13 @@ A Weibo client written by Electron.
 
 ## Table of Contents
 
+- [Background](#background)
+- [TODO](#todo)
+- [Install](#install)
+- [API Document](#api-document)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Background
 
 I want to use Weibo on desktop. But I don't like the web version. So I decide to build one by myself.
