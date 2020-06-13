@@ -19,14 +19,14 @@ class UserDataStore extends Store {
     }
 
     addUser(user) {
-        const tracksWithProps = user.map(user => {
+        const usersWithProps = user.map(user => {
             return {
                 id: uuidv4(),
                 uid: user
             }
         }).filter(user => {
             const currentUserUID = this.getUsers().map(user => user.uid)
-            return currentTracksPath.indexOf(track.path) < 0
+            return currentUserUID.indexOf(user.uid) < 0
         })
         this.tracks = [ ...this.tracks, ...tracksWithProps ]
         return this.saveUsers()
