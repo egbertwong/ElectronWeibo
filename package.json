@@ -14,7 +14,7 @@
   "license": "GPL-3.0",
   "devDependencies": {
     "minimist": ">=0.2.1",
-    "electron": "^7.1.5",
+    "electron": "^7.2.4",
     "nodemon": "^2.0.2"
   },
   "dependencies": {
