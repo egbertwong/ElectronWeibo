@@ -13,9 +13,9 @@
   "author": "EgbertW",
   "license": "GPL-3.0",
   "devDependencies": {
+    "electron": "^7.3.3",
     "minimist": ">=0.2.1",
-    "electron": "^7.2.4",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.5"
   },
   "dependencies": {
     "minimist": ">=0.2.1",
