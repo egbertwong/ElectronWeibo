@@ -14,11 +14,11 @@
   "license": "GPL-3.0",
   "devDependencies": {
     "electron": "^13.6.6",
-    "minimist": ">=0.2.1",
+    "minimist": ">=1.2.6",
     "nodemon": "^2.0.5"
   },
   "dependencies": {
-    "minimist": ">=0.2.1",
+    "minimist": ">=1.2.6",
     "bootstrap": "^4.4.1",
     "electron-store": "^5.1.0",
     "uuid": "^3.4.0"
